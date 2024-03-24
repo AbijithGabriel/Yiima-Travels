@@ -16,14 +16,14 @@
 
 :root {
 
-  /**
-   * colors
+  /*
+    colors
    */
 
   --battleship-gray: hsl(0, 0%, 53%);
-  --viridian-green: hsl(180, 98%, 31%);
+  --viridian-green: hsl(346, 82%, 57%);
   --silver-chalice: hsl(0, 0%, 69%);
-  --mikado-yellow: hsl(47, 98%, 50%);
+  --mikado-yellow: hsl(46, 98%, 50%);
   --granite-gray: hsl(0, 0%, 40%);
   --independence: hsl(219, 20%, 32%);
   --spanish-gray: hsl(0, 0%, 61%);
@@ -36,11 +36,11 @@
   --black: hsl(0, 0%, 0%);
   --jet: hsl(0, 0%, 20%);
 
-  /**
-   * typography
-   */
+  /*
+  typography
+  */
 
-  --ff-abril-fatface: 'Abril Fatface', cursive;
+  --ff-abril-fatface: 'Bellefair';
   --ff-comforter-brush: 'Comforter Brush', cursive;
   --ff-heebo: 'Heebo', sans-serif;
 
@@ -58,20 +58,17 @@
   --fw-600: 600;
   --fw-700: 700;
 
-  /**
-   * border radius
-   */
+  /*
+   border radius
+  */
 
   --radius-6: 6px;
 
-  /**
-   * spacing
-   */
+  /* spacing */
 
   --section-padding: 40px;
 
-  /**
-   * transition
+  /* transition
    */
 
   --transition-1: 0.15s ease;
@@ -314,6 +311,7 @@ body {
   color: var(--white-1);
   font-size: var(--fs-2);
   font-weight: var(--fw-600);
+  font-family: --ff-abril-fatface;
 }
 
 .nav-toggle-btn.active .open,
@@ -331,15 +329,17 @@ body {
 .navbar {
   width: 100%;
   padding: 20px 10px;
-  opacity: 0;
-  visibility: hidden;
+   opacity: 0;
+  visibility: hidden; 
   transition: var(--transition-1);
 }
 
-.header.active .navbar {
+
+ .header.active .navbar {
   opacity: 1;
   visibility: visible;
-}
+  transition: 0.1s ease;
+} 
 
 .navbar-list { margin-bottom: 15px; }
 
@@ -350,10 +350,13 @@ body {
   padding-block: 10px 0;
   border-bottom: 2px solid transparent;
   width: max-content;
+  transition: 0.3s ease;
 }
 
-.navbar-link:is(:hover, :focus) { border-color: var(--white-1); }
+ .navbar-link:is(:hover, :focus) { border-color: var(--white-1); }
 
+
+ 
 
 
 
@@ -488,7 +491,11 @@ body {
 .popular-card .card-location { color: var(--spanish-gray); }
 
 
-
+.popular-card:hover{
+  box-shadow: rgba(252, 17, 56, 0.151) 0px 54px 55px,
+      rgba(239, 22, 87, 0.159) 0px -12px 30px, rgba(233, 14, 105, 0.147) 0px 4px 6px,
+      rgba(240, 28, 106, 0.166) 0px 12px 13px, rgba(234, 21, 99, 0.175) 0px -3px 5px;
+}
 
 
 /*-----------------------------------*\
@@ -651,6 +658,7 @@ body {
 .footer-bottom .logo {
   text-align: center;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .copyright {
