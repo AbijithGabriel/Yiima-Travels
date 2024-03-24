@@ -468,7 +468,7 @@ body {
   #POPULAR
 \*-----------------------------------*/
 .popular-card{
-  transform: scale(0.85);
+  transform: scale(0.88);
 }
 .popular-card :is(.card-price, .card-rating) {
   color: var(--white-1);
@@ -589,7 +589,16 @@ body {
 
 .btn-link:is(:hover, :focus) { color: var(--oxford-blue); }
 
-
+.blog-card{
+  transform: scale(0.88);
+}
+.blog-card:hover{
+  box-shadow: rgba(252, 17, 56, 0.151) 0px 54px 55px,
+  rgba(239, 22, 87, 0.159) 0px -12px 30px, rgba(233, 14, 105, 0.147) 0px 4px 6px,
+  rgba(240, 28, 106, 0.166) 0px 12px 13px, rgba(234, 21, 99, 0.175) 0px -3px 5px;
+  transform: scale(0.95) skew(3deg);
+  transition: 0.3s ease-in-out;
+}
 
 
 
